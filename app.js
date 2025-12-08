@@ -97,11 +97,9 @@ async function ShowZodiac() {
         ${zodiacDescriptions[data.animal].description}`;
     } catch (error) {
         document.getElementById("zodiac").innerHTML = `
-        🍕 The Pizza Rat<br>
-Born under the sign of eternal snacking.
-<br><br>
-Resourceful, street-smart, and always chasing that last slice.
-<br<br>
-Destined to rule food courts and midnight fridge raids.`;
+        🐞 The Debugger Beetle<br><br>
+        Lives between console logs and stack traces. 
+        <br>Patient, persistent, and always finds what you forgot to test.
+        <br>Destined to haunt staging servers at 3 AM.`;
     }
 }
