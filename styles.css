@@ -1,0 +1,197 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #8B0000 0%, #DC143C 50%, #FFD700 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+            width: 100%;
+            border: 3px solid #FFD700;
+        }
+
+        h1 {
+            color: #8B0000;
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .chinese-text {
+            text-align: center;
+            font-size: 1.5em;
+            color: #DC143C;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+
+        .input-group {
+            margin: 20px 0;
+        }
+
+        label {
+            display: block;
+            color: #8B0000;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        input[type="date"] {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #DC143C;
+            border-radius: 8px;
+            font-size: 1em;
+            transition: all 0.3s;
+        }
+
+        input[type="date"]:focus {
+            outline: none;
+            border-color: #FFD700;
+            box-shadow: 0 0 10px rgba(220, 20, 60, 0.3);
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #DC143C, #8B0000);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.2em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        #zodiac {
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(255, 215, 0, 0.1);
+            border-radius: 10px;
+            text-align: center;
+            min-height: 50px;
+            color: #8B0000;
+            font-size: 1.1em;
+            border: 2px dashed #FFD700;
+        }
+
+        .decorative-border {
+            border-top: 3px double #DC143C;
+            border-bottom: 3px double #DC143C;
+            padding: 10px 0;
+            margin: 20px 0;
+        }
+
+        .metal {
+            color: #C0C0C0;
+            font-weight: bold;
+            text-shadow: 0 0 10px rgba(192, 192, 192, 0.5);
+            background: linear-gradient(135deg, #E8E8E8, #B0B0B0);
+            padding: 10px 20px;
+            border-radius: 8px;
+            border: 2px solid #A9A9A9;
+        }
+
+        .water {
+            color: #000080;
+            font-weight: bold;
+            text-shadow: 0 0 10px rgba(30, 144, 255, 0.6);
+            background: linear-gradient(135deg, #87CEEB, #4682B4);
+            padding: 10px 20px;
+            border-radius: 8px;
+            border: 2px solid #1E90FF;
+        }
+
+        .wood {
+            color: #004d00;
+            font-weight: bold;
+            text-shadow: 0 0 8px rgba(34, 139, 34, 0.4);
+            background: linear-gradient(135deg, #90EE90, #228B22);
+            padding: 10px 20px;
+            border-radius: 8px;
+            border: 2px solid #2E8B57;
+        }
+
+        .fire {
+            color: #8B0000;
+            font-weight: bold;
+            text-shadow: 0 0 15px rgba(255, 69, 0, 0.7);
+            background: linear-gradient(135deg, #FF6347, #DC143C);
+            padding: 10px 20px;
+            border-radius: 8px;
+            border: 2px solid #B22222;
+        }
+
+        .earth {
+            color: #4B3621;
+            font-weight: bold;
+            text-shadow: 0 0 8px rgba(210, 180, 140, 0.5);
+            background: linear-gradient(135deg, #F5DEB3, #D2B48C);
+            padding: 10px 20px;
+            border-radius: 8px;
+            border: 2px solid #8B7355;
+        }
+
+        .fortune-cookie {
+            font-size: 3em;
+            text-align: center;
+            cursor: pointer;
+            margin-top: 30px;
+            transition: transform 0.3s;
+        }
+
+        .fortune-cookie.shake {
+            animation: shake 0.5s;
+        }
+
+        @keyframes shake {
+
+            0%,
+            100% {
+                transform: translateX(0);
+            }
+
+            10%,
+            30%,
+            50%,
+            70%,
+            90% {
+                transform: translateX(-10px);
+            }
+
+            20%,
+            40%,
+            60%,
+            80% {
+                transform: translateX(10px);
+            }
+        }

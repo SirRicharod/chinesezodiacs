@@ -103,3 +103,29 @@ async function ShowZodiac() {
         <br>Destined to haunt staging servers at 3 AM.`;
     }
 }
+
+let fortuneCookie = Math.floor(Math.random() * 8) + 3;
+const fortuneCookieElement = document.getElementById("fortuneCookie");
+const fortunes = [
+    "Your next bug will only appear in production… on Friday night.",
+    "A missing semicolon will teach you patience.",
+    "Beware the merge conflict — it knows your deepest secrets.",
+    "Your console.log will reveal more than your horoscope.",
+    "The API you seek will be down exactly when you demo.",
+    "You will find true love… in a clean commit history.",
+    "Your CSS will finally center… but only by accident.",
+    "A wise developer clears cache before enlightenment.",
+    "Your destiny lies in endless npm installs.",
+    "The Debugger Beetle watches over you — test twice, deploy once."
+];
+
+function FortuneCookie() {
+    fortuneCookie -= 1;
+    if (fortuneCookie === 0) {
+        const randomIndex = Math.floor(Math.random() * fortunes.length);
+        fortuneCookieElement.innerHTML = `<span style="font-size:16px">${fortunes[randomIndex]}</span>`;
+        fortuneCookieElement.removeEventListener("click", FortuneCookie);
+
+    }
+}
+fortuneCookieElement.addEventListener("click", FortuneCookie);
