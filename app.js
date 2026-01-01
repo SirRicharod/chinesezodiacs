@@ -59,6 +59,8 @@ const zodiacElements = {
     Earth: "earth"
 };
 
+const dateInput = document.querySelector("#birthday");
+
 function SetPath() {
     let birthday = new Date(document.getElementById("birthday").value);
     let day = birthday.getDate();
@@ -80,7 +82,7 @@ async function ShowZodiac() {
 
         // Easter egg for 4/20
         if (birthday.getMonth() === 3 && birthday.getDate() === 20) {
-            document.getElementById("zodiac").innerHTML = `🌿 Your Chinese Zodiac Sign is: <b>The Blazing Dragon 🐉💨</b>
+            document.getElementById("zodiac").innerHTML = `Your Chinese Zodiac Sign is: <b>The Blazing Dragon 🐉💨</b>
             <br><br>
             Element of<br><br><span class="fire">High Vibes</span>
             <br><br>
@@ -103,6 +105,12 @@ async function ShowZodiac() {
         <br>Destined to haunt staging servers at 3 AM.`;
     }
 }
+
+dateInput.addEventListener('keypress', function(event) {
+    if (event.key === 'Enter') {
+        ShowZodiac();
+    }
+}); 
 
 let fortuneCookie = Math.floor(Math.random() * 8) + 3;
 const fortuneCookieElement = document.getElementById("fortuneCookie");
